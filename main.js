@@ -1,24 +1,24 @@
-var words = ['Car', 'Poop', 'Palace', 'Plane Crash'];
+var words = ['Car', 'Poop', 'Palace', 'Agapito di sousa'];
 
-alphabetizer = {};
+var jsonObj = {
+    theArray: [
+        {
+            link: 'bloob'
+        },
+        {
+            link: 'bloob'
+        },
+        {
+            link: 'bloob'
+        },
+        {
+            link: 'bloob'
+        }
+    ]
+};
 
-for (var i = 0; i < words.length; i++) {
-        Alphabetizer(words[i]);
-        console.log(words[i]);
-}
+var wordSorter = new Alphabetizer(words);
 
-
-function Alphabetizer(word) {
-
-    // Check if letter exists.
-    word[0] in alphabetizer ? (
-        // Push to array.
-        alphabetizer[word[0]].push(word),
-        // Sort array.
-        alphabetizer[word[0]].sort()
-    ) : (
-        // Create new object property.  
-        alphabetizer[word[0]] = [word]);
-}
-
-Alphabetizer();
+wordSorter.debug = true;
+wordSorter.organizeArray();
+wordSorter.template('body');
