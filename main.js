@@ -1,24 +1,29 @@
-var words = ['Car', 'Poop', 'Palace', 'Agapito di sousa'];
+var words = ['Car', 'Poop', 'Palace', 'Agapito di sousa', 'Ballin', 'Alarm Clock'];
 
 var jsonObj = {
     theArray: [
         {
-            link: 'bloob'
+            name: 'Duncan',
+            link: '2bloob'
         },
         {
-            link: 'bloob'
+            name: 'IN MA BOOT!',
+            link: '1bloob'
         },
         {
-            link: 'bloob'
+            name: 'The bloob',
+            link: '9bloob'
         },
         {
-            link: 'bloob'
+            name: 'My name is Joe',
+            link: '6bloob'
         }
     ]
 };
 
+var api = null;
+
 var wordSorter = new Alphabetizer(words);
 
-wordSorter.debug = true;
-wordSorter.organizeArray();
+wordSorter.organizeArray(words);
 wordSorter.template('body');
